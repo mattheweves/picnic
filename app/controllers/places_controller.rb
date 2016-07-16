@@ -3,7 +3,7 @@ class PlacesController < ApplicationController
 	before_action :authenticate_user!, :only =>[:new, :create, :edit, :update, :destroy]
 	def index
 		#@places = Place.all
-		@places = Place.order("name").page(params[:page]).per(4)
+		@places = Place.order("name").page(params[:page]).per(2)
 	end
 
 	def new
@@ -46,6 +46,7 @@ class PlacesController < ApplicationController
 		end
 
 		@place.update_attributes(place_params)
+		
 	    if @place.valid?
 			redirect_to root_path
 		else

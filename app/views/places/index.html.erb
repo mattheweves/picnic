@@ -5,27 +5,34 @@
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-        <%= image_tag 'slider1.jpg', :class => 'img-responsive' %>
+        <%= image_tag 'picnic1.jpg', :class => 'img-responsive'  %>
       <div class="carousel-caption">
-        Find food and enjoy.
+        FIND FOOD AND ENJOY.
       </div>
     </div>
     <div class="item">
-        <%= image_tag 'slider2.png', :class => 'img-responsive' %>
+        <%= image_tag 'picnic2.jpg', :class => 'img-responsive'  %>
       <div class="carousel-caption">
-      	Yum
+      	FAIRE UN PIQUE-NIQUE
       	</div>
       </div>
       <div class="item">
-        <%= image_tag 'slider3.png', :class => 'img-responsive' %>
+        <%= image_tag 'picnic3.jpg', :class => 'img-responsive' %>
       <div class="carousel-caption">
-      	Yum
+      	ALLEZ
       	</div>
+      </div>
+      <div class="item">
+        <%= image_tag 'picnic4.jpg', :class => 'img-responsive' %>
+      <div class="carousel-caption">
+        LE MEILLEUR INGREDIENTS!
+        </div>
       </div>
   </div>
 
@@ -54,7 +61,6 @@
 				<b>Rating:</b>  <%=	place.comments.last.humanized_rating  %> <br /> - 
 				 <% end %>
 				    <%= place.comments.last.message %>
-	 			<small><%=     place.comments.last.user.email   %> </small>
 			</blockquote>
 		</div>
 	<% end %>
@@ -64,9 +70,9 @@
 
 <div class="row">
 	<div class="paginate col-md-3 col-xs-3 col-md-offset-8 col-xs-offset-8">
-		<h4><span class="prev disabled"><%= raw(t 'views.pagination.previous') %></span>
-				<%= paginate @places %></h4>
+		<h4><%= paginate @places %></h4>
 		</div>
+
 </div>
 
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nomster</title>
+  <title>FAIRE UN PIQUE-NIQUE</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -18,27 +18,26 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to 'Nomster', root_path, :class => 'navbar-brand' %>
+       <%= link_to image_tag('basket.png'), root_path, :class => 'pull-left'  %>
+       <div class="logo">PICNIC</div>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li>
+       <ul class="nav navbar-nav navbar-right">
+
+        <% if user_signed_in? %>
+          <li>
             <%= link_to new_place_path  do %>
             <i class="glyphicon glyphicon-plus-sign"></i>
             New Place
             <% end %>
          </li>
-      </ul>
-       <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
           <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
           <% else %>
           <li><%= link_to 'Sign In', new_user_session_path %></li>
           <li><%= link_to 'Sign Up', new_user_registration_path %></li>
           <% end %>
-        <li><a href="#">Link</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

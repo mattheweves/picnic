@@ -4,7 +4,7 @@ class Place < ActiveRecord::Base
 	has_many :comments
 	has_many :photos
 
-	mount_uploader :photo, PictureUploader
+	mount_uploader :picture, PictureUploader
 	
 	geocoded_by :address
 	after_validation :geocode

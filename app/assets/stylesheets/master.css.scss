@@ -1,4 +1,6 @@
 
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+
 
 h1, h2, h3, h4, h5, h6 {
   margin:0;
@@ -35,6 +37,15 @@ font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstre
   color: #93EDC2;
   font-family: 'nobileregular', sans-serif;
   font-size: 26px;
+}
+
+.logo {
+  font-family: 'Righteous', cursive;
+  color: #337ab7;
+  font-size: 26px;
+  position: inline;
+  margin-left: 65px;
+  margin-top: 6px;
 }
 
 .paginate {
@@ -86,25 +97,97 @@ img{
 
 }
 
-.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-    height: 550px;
-    width: auto;
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-inner {
+  border-radius: 15px;
 }
 
 .carousel-caption {
-    font-family: 'Helvetica Neue', Helvetica, sans-serif;
-    font-size: 60px;
+    font-family: 'nobileregular', sans-serif;
+    font-size: 40px;
     font-weight:100;
     text-shadow: rgba(0,0,0,0.95) 2px 2px;
     background-color: rgba(0,0,0,0.5);
     width:100%;
-    position:absolute;
+    position:center center-scroll;
     left:0;
 
 }
 
-.carousel {
-  box-shadow: 0px 3px 8px #2a2a2a;
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 15;
+  margin: 0;
+  padding: 0 25px 25px 0;
+  text-align: right;
 }
 
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
+
+
+/* Custom Navbar */
+
+.navbar-harvest .navbar-inner {
+  background: #f36c00;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f68a28), color-stop(100%, #f36c00));
+  background: -webkit-linear-gradient(top, #f68a28,#f36c00);
+  background: -moz-linear-gradient(top, #f68a28,#f36c00);
+  background: -o-linear-gradient(top, #f68a28,#f36c00);
+  background: -ms-linear-gradient(top, #f68a28,#f36c00);
+  background: linear-gradient(top, #f68a28,#f36c00);
+  margin-bottom: 0px;
+} 
+.navbar-harvest .navbar-inner .nav {
+  float: right;
+  margin-bottom: 0px;
+} 
+.navbar-harvest .brand {
+  color: #fff;
+  text-shadow: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+}
+.navbar-harvest .navbar-inner .nav li a {
+  color: #fff;
+  text-shadow: none;
+  background: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: background 0.1s linear,opacity 0.1s linear;
+  -moz-transition: background 0.1s linear,opacity 0.1s linear;
+  -ms-transition: background 0.1s linear,opacity 0.1s linear;
+  -o-transition: background 0.1s linear,opacity 0.1s linear;
+  transition: background 0.1s linear,opacity 0.1s linear;
+  -webkit-font-smoothing: antialiased;      
+  opacity: .9;
+  font-weight: 400;
+}
+.navbar-harvest .navbar-inner .nav li a:hover {
+  background: #f67d0f;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  opacity: 1;
+  margin-bottom: 0px;
+}
 
