@@ -43,6 +43,7 @@ gem 'devise', '>= 3.2.4'
 gem 'geocoder'
 gem 'figaro', '>= 1.0.0'
 gem 'carrierwave'
+gem 'rails_12factor', group: :production
 
 # Use unicorn as the app server
 # gem 'unicorn'
