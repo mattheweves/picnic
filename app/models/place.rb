@@ -5,7 +5,7 @@ class Place < ActiveRecord::Base
 	has_many :photos
 
 	mount_uploader :picture, PictureUploader
-	
+
 	geocoded_by :address
 	after_validation :geocode
 

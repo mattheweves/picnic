@@ -39,14 +39,14 @@ class PlacesController < ApplicationController
 		#We should find the record the user wants to update.
 		#We should update this record and save the changes the user specifies into our database.
 		#We should send the user back to the root page.
-		
+
 		@place = Place.find(params[:id])
 		if @place.user != current_user
 			return render :text => 'Not Allowed', :status => :forbidden
 		end
 
 		@place.update_attributes(place_params)
-		
+
 	    if @place.valid?
 			redirect_to root_path
 		else
@@ -66,12 +66,12 @@ class PlacesController < ApplicationController
 
 
 
-	private 
+	private
 
 	def place_params
 		params.require(:place).permit(:name, :address, :description)
 	end
 
-	
+
 
 end
